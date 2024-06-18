@@ -1,0 +1,94 @@
+.chessboard-container {
+  display: inline-block;
+  position: relative;
+  padding: 20px;
+}
+
+.labels-top {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 26px;
+}
+
+.label-top {
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chessboard {
+  grid-template-columns: repeat(8, 50px);
+  grid-gap: 0;
+}
+
+.board-row {
+  display: flex;
+}
+
+.label-side {
+  width: 20px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.cell:nth-child(even) {
+  background-color: #769656;
+}
+
+.cell:nth-child(odd) {
+  background-color: #eeeed2;
+}
+
+.board-row:nth-child(even) .cell:nth-child(even) {
+  background-color: #eeeed2;
+}
+
+.board-row:nth-child(even) .cell:nth-child(odd) {
+  background-color: #769656;
+}
+
+.board-row:nth-child(odd) .cell:nth-child(even) {
+  background-color: #769656;
+}
+
+.board-row:nth-child(odd) .cell:nth-child(odd) {
+  background-color: #eeeed2;
+}
+
+.highlight {
+    color:#555555;
+  font-size: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
